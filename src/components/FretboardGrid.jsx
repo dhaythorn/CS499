@@ -15,8 +15,8 @@ function getColor(pc) {
 
 export default function FretboardGrid({
 	strings = 6,
-	frets = 13, // hack for now to see the full octave on each string (open strings and 12th fret are the same notes different octaves)
 	tuning = DEFAULT_TUNING,
+	frets = 13, // hack for now to see the full octave on each string (open strings and 12th fret are the same notes different octaves)
 	activePCs = null, // This is how i'm handling whether or not to render one of the cirlces on the fretboard
 }) {
 	const width = 900;

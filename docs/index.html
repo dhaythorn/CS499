@@ -1,14 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/CS499/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>most-basic</title>
-    <script type="module" crossorigin src="/CS499/assets/index-DsdQ2TVX.js"></script>
-    <link rel="stylesheet" crossorigin href="/CS499/assets/index-COcDBgFa.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dan Haythorn – CS499 ePortfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- You can add your own CSS or link to /style.css if you want -->
+		<style>
+			body {
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+				margin: 0;
+				padding: 0;
+				line-height: 1.5;
+				background: #0f172a;
+				color: #e5e7eb;
+			}
+			header {
+				padding: 1.5rem 1.25rem;
+				background: #020617;
+				border-bottom: 1px solid #1e293b;
+				position: sticky;
+				top: 0;
+				z-index: 10;
+			}
+			header h1 {
+				margin: 0 0 0.25rem 0;
+				font-size: 1.5rem;
+			}
+			header nav a {
+				margin-right: 1rem;
+				color: #38bdf8;
+				text-decoration: none;
+				font-size: 0.95rem;
+			}
+			header nav a:hover {
+				text-decoration: underline;
+			}
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 2rem 1.25rem 4rem;
+			}
+			section {
+				margin-bottom: 3rem;
+				padding-bottom: 2rem;
+				border-bottom: 1px solid #1e293b;
+			}
+			section:last-of-type {
+				border-bottom: none;
+			}
+			h2 {
+				margin-top: 0;
+				font-size: 1.35rem;
+			}
+			.card-list {
+				list-style: none;
+				padding: 0;
+				margin: 1rem 0 0 0;
+				display: grid;
+				gap: 1rem;
+			}
+			.card {
+				border: 1px solid #1f2933;
+				border-radius: 0.5rem;
+				padding: 1rem 1.25rem;
+				background: #020617;
+			}
+			.card h3 {
+				margin-top: 0;
+			}
+			.badge {
+				display: inline-block;
+				padding: 0.15rem 0.5rem;
+				border-radius: 999px;
+				background: #1e40af;
+				font-size: 0.75rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				margin-bottom: 0.5rem;
+			}
+			.small {
+				font-size: 0.9rem;
+			}
+			#app-container {
+				margin-top: 1rem;
+				border-radius: 0.75rem;
+				overflow: hidden;
+				border: 1px solid #1f2933;
+				background: #020617;
+				padding: 1rem;
+			}
+		</style>
+		<script type="module" crossorigin src="/CS499/assets/index-BISLjsls.js"></script>
+		<link rel="stylesheet" crossorigin href="/CS499/assets/index-COcDBgFa.css">
+	</head>
+	<body>
+		<header>
+			<h1>CS499 Computer Science Capstone – ePortfolio</h1>
+			<nav>
+				<a href="#self-assessment">Self-Assessment</a>
+				<a href="#artifacts">Artifacts</a>
+				<a href="#scale-app">Scale App</a>
+				<a href="#video">Code Review Video</a>
+			</nav>
+		</header>
+
+		<main>
+			<!-- 1. PROFESSIONAL SELF-ASSESSMENT -->
+			<section id="self-assessment">
+				<span class="badge">Introduction</span>
+				<h2>Professional Self-Assessment</h2>
+				<p class="small">
+					<!-- Replace this placeholder with your real self-assessment text.
+               This should be the same content you submit to your instructor. -->
+					This ePortfolio demonstrates how I have grown into an entry-level software engineer
+					through the completion and enhancement of key artifacts in algorithms and data structures,
+					software engineering and design, and databases. By revisiting and improving prior
+					coursework, I strengthened code quality, testing discipline, and my ability to design
+					maintainable, scalable solutions.
+				</p>
+			</section>
+
+			<!-- 2. ARTIFACT OVERVIEW / LINKS -->
+			<section id="artifacts">
+				<span class="badge">Artifacts</span>
+				<h2>Enhanced Artifacts Overview</h2>
+				<ul class="card-list">
+					<li class="card">
+						<h3>Scale Application (Full Stack / Front-End Focus)</h3>
+						<p class="small">
+							React-based application demonstrating user interface design, client-side validation,
+							modular components, and code quality improvements based on instructor feedback.
+						</p>
+						<p class="small">
+							<strong>Live demo:</strong>
+							<a href="#scale-app">View below on this page</a>
+						</p>
+						<p class="small">
+							<strong>Supporting files:</strong><br />
+							<!-- update these paths once you place the files in /public -->
+							Original artifact:
+							<a href="/artifacts/scale-original.zip">Download</a><br />
+							Enhanced artifact:
+							<a href="/artifacts/scale-enhanced.zip">Download</a><br />
+							Enhancement narrative:
+							<a href="/artifacts/scale-narrative.pdf">View narrative</a>
+						</p>
+					</li>
+					<!-- If you add other artifacts, make more cards like this -->
+				</ul>
+			</section>
+
+			<!-- 3. LIVE SCALE APP SECTION -->
+			<section id="scale-app">
+				<span class="badge">Live Artifact</span>
+				<h2>Scale App – Live Demonstration</h2>
+				<p class="small">
+					This is the live version of my enhanced scale application. It is built with React and
+					deployed using Vite and GitHub Pages.
+				</p>
+				<div id="app-container">
+					<!-- React will mount into this div -->
+					<div id="root"></div>
+				</div>
+			</section>
+
+			<!-- 4. CODE REVIEW VIDEO -->
+			<section id="video">
+				<span class="badge">Code Review</span>
+				<h2>Code Review Video</h2>
+				<p class="small">
+					The following video walks through the original artifact, identifies weaknesses, and
+					explains how the enhancements improve readability, maintainability, and alignment with
+					industry practices.
+				</p>
+				<!-- Once you put code-review.mp4 into /public/videos, this will work -->
+				<video controls width="100%">
+					<source src="/videos/code-review.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</section>
+		</main>
+
+		<!-- This script boots your React app into #root as usual -->
+	</body>
 </html>

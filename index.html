@@ -103,75 +103,55 @@
 		</header>
 
 		<main>
-			<!-- 1. PROFESSIONAL SELF-ASSESSMENT -->
+			<!-- SELF-ASSESSMENT -->
 			<section id="self-assessment">
-				<span class="badge">Introduction</span>
 				<h2>Professional Self-Assessment</h2>
-				<p class="small">
-					<!-- Replace this placeholder with your real self-assessment text.
-               This should be the same content you submit to your instructor. -->
-					This ePortfolio demonstrates how I have grown into an entry-level software engineer
-					through the completion and enhancement of key artifacts in algorithms and data structures,
-					software engineering and design, and databases. By revisiting and improving prior
-					coursework, I strengthened code quality, testing discipline, and my ability to design
-					maintainable, scalable solutions.
+				<p>
+					<!-- Paste your real self-assessment text here -->
+					This ePortfolio demonstrates how I have grown into an entry-level software engineer by
+					enhancing prior coursework in the areas of software design and engineering, algorithms and
+					data structures, and databases. Through these enhancements I strengthened...
 				</p>
 			</section>
 
-			<!-- 2. ARTIFACT OVERVIEW / LINKS -->
+			<!-- ARTIFACTS OVERVIEW -->
 			<section id="artifacts">
-				<span class="badge">Artifacts</span>
-				<h2>Enhanced Artifacts Overview</h2>
-				<ul class="card-list">
-					<li class="card">
-						<h3>Scale Application (Full Stack / Front-End Focus)</h3>
-						<p class="small">
-							React-based application demonstrating user interface design, client-side validation,
-							modular components, and code quality improvements based on instructor feedback.
-						</p>
-						<p class="small">
-							<strong>Live demo:</strong>
-							<a href="#scale-app">View below on this page</a>
-						</p>
-						<p class="small">
-							<strong>Supporting files:</strong><br />
-							<!-- update these paths once you place the files in /public -->
-							Original artifact:
-							<a href="/artifacts/scale-original.zip">Download</a><br />
-							Enhanced artifact:
-							<a href="/artifacts/scale-enhanced.zip">Download</a><br />
-							Enhancement narrative:
-							<a href="/artifacts/scale-narrative.pdf">View narrative</a>
-						</p>
+				<h2>Artifacts</h2>
+				<p>
+					The primary artifact in this portfolio is my Guitar Scale Viewer application, which
+					demonstrates front-end software design, testing, and code quality improvements.
+				</p>
+				<ul>
+					<li>
+						Original artifact:
+						<a href="/artifacts/scale-original.zip">Download</a>
 					</li>
-					<!-- If you add other artifacts, make more cards like this -->
+					<li>
+						Enhanced artifact:
+						<a href="/artifacts/scale-enhanced.zip">Download</a>
+					</li>
+					<li>
+						Enhancement narrative:
+						<a href="/artifacts/scale-narrative.pdf">View narrative</a>
+					</li>
 				</ul>
 			</section>
 
-			<!-- 3. LIVE SCALE APP SECTION -->
+			<!-- LIVE SCALE APP -->
 			<section id="scale-app">
-				<span class="badge">Live Artifact</span>
 				<h2>Scale App – Live Demonstration</h2>
-				<p class="small">
-					This is the live version of my enhanced scale application. It is built with React and
-					deployed using Vite and GitHub Pages.
-				</p>
-				<div id="app-container">
-					<!-- React will mount into this div -->
-					<div id="root"></div>
-				</div>
+				<p>This is the live version of my enhanced Guitar Scale Viewer application.</p>
+				<div id="root"></div>
+				<!-- React mounts here -->
 			</section>
 
-			<!-- 4. CODE REVIEW VIDEO -->
+			<!-- CODE REVIEW VIDEO -->
 			<section id="video">
-				<span class="badge">Code Review</span>
 				<h2>Code Review Video</h2>
-				<p class="small">
-					The following video walks through the original artifact, identifies weaknesses, and
-					explains how the enhancements improve readability, maintainability, and alignment with
-					industry practices.
+				<p>
+					This video reviews the original artifact, identifies issues, and explains how the
+					enhancements address them.
 				</p>
-				<!-- Once you put code-review.mp4 into /public/videos, this will work -->
 				<video controls width="100%">
 					<source src="/videos/code-review.mp4" type="video/mp4" />
 					Your browser does not support the video tag.
@@ -179,7 +159,6 @@
 			</section>
 		</main>
 
-		<!-- This script boots your React app into #root as usual -->
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>

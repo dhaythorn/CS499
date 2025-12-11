@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<title>Dan Haythorn – CS499 ePortfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- You can add your own CSS or link to /style.css if you want -->
 		<style>
 			body {
 				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -13,6 +12,11 @@
 				line-height: 1.5;
 				background: #0f172a;
 				color: #e5e7eb;
+			}
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem 1.25rem;
 			}
 			header {
 				padding: 1.5rem 1.25rem;
@@ -89,77 +93,149 @@
 				background: #020617;
 				padding: 1rem;
 			}
+			#scale-app {
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+			#app-container {
+				background: #0b0b0b;
+				padding: 2rem;
+				margin: 0 auto;
+				max-width: 1400px;
+				border-radius: 12px;
+				overflow-x: auto;
+				overflow-y: hidden;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+			}
+
+			#root {
+				width: max-content; /* prevents React from collapsing the content */
+			}
 		</style>
 		<script type="module" crossorigin src="/CS499/assets/index-BISLjsls.js"></script>
 		<link rel="stylesheet" crossorigin href="/CS499/assets/index-COcDBgFa.css">
 	</head>
 	<body>
-		<header>
-			<h1>CS499 Computer Science Capstone – ePortfolio</h1>
-			<nav>
-				<a href="#self-assessment">Self-Assessment</a>
-				<a href="#artifacts">Artifacts</a>
-				<a href="#scale-app">Scale App</a>
-				<a href="#video">Code Review Video</a>
-			</nav>
-		</header>
+		<div class="container">
+			<header>
+				<h1>CS499 Computer Science Capstone – ePortfolio</h1>
+				<nav>
+					<a href="#self-assessment">Self-Assessment</a>
+					<a href="#artifacts">Artifacts</a>
+					<a href="#scale-app">Scale App</a>
+					<a href="#video">Code Review Video</a>
+				</nav>
+			</header>
 
-		<main>
-			<!-- SELF-ASSESSMENT -->
-			<section id="self-assessment">
-				<h2>Professional Self-Assessment</h2>
-				<p>
-					<!-- Paste your real self-assessment text here -->
-					This ePortfolio demonstrates how I have grown into an entry-level software engineer by
-					enhancing prior coursework in the areas of software design and engineering, algorithms and
-					data structures, and databases. Through these enhancements I strengthened...
-				</p>
-			</section>
+			<main>
+				<section id="self-assessment">
+					<h2>Professional Self-Assessment</h2>
+					<p>
+						For my final project, I created a program that shows a full breakdown of what a small,
+						modern web application design process would look like. What I built, is a program that
+						lets the user visualize a guitar fretboard with various scales displayed on it. It’s
+						designed to be extensible so if I ever want to improve on it I can. The project’s scope
+						isn’t huge but, it showcases many aspects of the web development stack. It’s using a
+						modern workflow with React, Vite, Node.js, MongoDB, CSS styles, and more.
+					</p>
+					<p>
+						In terms of software engineering, it “looks like” an MVC(Model-View-Controller) app but
+						it’s React so its slightly different. The goal is to separate the decision making from
+						the user interface for a modular design (I might be able to reuse the UI elsewhere for
+						example). The model portion contains the programs logic concerning the notes, scales and
+						algorithms while the view portion handles the UI. React hooks are how the transitions
+						are managed.
+					</p>
+					<p>
+						The program uses some simple algorithms to organize the scales and then lay them out
+						correctly on the fretboard. There are twelve notes in the chromatic scale, so they are
+						represented with an array. Then the scales can be represented as a list of semitone
+						intervals from the root of the scale. When the user pics a root note and scale type, the
+						app finds the index of the root note in the NOTES array, and for each interval performs
+						a calculation to get the index and then uses that on the NOTES array (NOTES[index]) and
+						collects them all into a set.
+					</p>
+					<p>
+						Time complexity is constant. Theres a fixed number of notes in a scale. So if k is the
+						number of notes, finding the rootIndex with a scan over 12 notes would be O(12) or O(1),
+						looping over it is O(k) and storing it is O(k) as well. Since this is the case, in Big-O
+						notation it would be O(k).
+					</p>
+					<p>
+						To display the notes on the fretboard, I represent the guitar strings as an array,
+						decide how many frets to show, and then for each string, start with the open string’s
+						note index, add the fret number to find the note and use modulo 12 to make sure it stays
+						in the acceptable boundary. Time complexity for this is O(S * F). S = number of strings,
+						F = frets, k = notes. There’s an outer and inner loop which adds time but, this is
+						always going to be a small group of numbers.
+					</p>
+					<p>
+						The database is simple and straightforward. It makes sure the page has a “state” that
+						doesn’t go away when the page is refreshed. There are a lot of things in this program
+						that could eventually make use of a database, but it would add a lot of complexity, and
+						I’d like to keep this more focused. Examples would be, lots of complex chords and scales
+						and user profiles.
+					</p>
+					<p>
+						This project showcases a full range of abilities that can be expanded on in the future
+						to take me different directions. I’m also a guitar player so this was an interesting
+						project to work on and one that I can use and expand on. If this were the real world,
+						there might be other team members, some on database, some working on UI, some talking to
+						stakeholders. I would spend a lot of time on security and algorithm efficiency.
+					</p>
+					<p>
+						I only did this project instead of a few small ones to illustrate different strengths. I
+						made a prototype and then made changes to it throughout the course. I’d also like to add
+						that in this class and throughout, I got a lot of experience with project management and
+						things like GitHub. And GitHub pages.
+					</p>
+				</section>
 
-			<!-- ARTIFACTS OVERVIEW -->
-			<section id="artifacts">
-				<h2>Artifacts</h2>
-				<p>
-					The primary artifact in this portfolio is my Guitar Scale Viewer application, which
-					demonstrates front-end software design, testing, and code quality improvements.
-				</p>
-				<ul>
-					<li>
-						Original artifact:
-						<a href="/artifacts/scale-original.zip">Download</a>
-					</li>
-					<li>
-						Enhanced artifact:
-						<a href="/artifacts/scale-enhanced.zip">Download</a>
-					</li>
-					<li>
-						Enhancement narrative:
-						<a href="/artifacts/scale-narrative.pdf">View narrative</a>
-					</li>
-				</ul>
-			</section>
+				<section id="artifacts">
+					<h2>Artifacts</h2>
+					<p>
+						The primary artifact in this portfolio is my Guitar Scale Viewer application, which
+						demonstrates front-end software design, testing, and code quality improvements.
+					</p>
+					<ul>
+						<li>
+							Original artifact:
+							<a href="/artifacts/scale-original.zip">Download</a>
+						</li>
+						<li>
+							Enhanced artifact:
+							<a href="/artifacts/scale-enhanced.zip">Download</a>
+						</li>
+						<li>
+							Enhancement narrative:
+							<a href="/artifacts/scale-narrative.pdf">View narrative</a>
+						</li>
+					</ul>
+				</section>
 
-			<!-- LIVE SCALE APP -->
-			<section id="scale-app">
-				<h2>Scale App – Live Demonstration</h2>
-				<p>This is the live version of my enhanced Guitar Scale Viewer application.</p>
-				<div id="root"></div>
-				<!-- React mounts here -->
-			</section>
+				<section id="scale-app">
+					<h2>Scale App – Live Demonstration</h2>
+					<p>This is the live version of my enhanced Guitar Scale Viewer application.</p>
+					<div id="root"></div>
+				</section>
 
-			<!-- CODE REVIEW VIDEO -->
-			<section id="video">
-				<h2>Code Review Video</h2>
-				<p>
-					This video reviews the original artifact, identifies issues, and explains how the
-					enhancements address them.
-				</p>
-				<video controls width="100%">
-					<source src="/videos/code-review.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
-			</section>
-		</main>
+				<section id="video">
+					<h2>Code Review Video</h2>
+					<p>This video reviews the original artifact and explains my enhancements.</p>
+					<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden">
+						<iframe
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/uiMQIrc8P-E?si=lhlSXBzVH2q_GynF"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
+					</div>
+				</section>
+			</main>
+		</div>
 
 	</body>
 </html>

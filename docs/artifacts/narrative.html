@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Enhancement Narrative</title>
+
+	<style>
+		:root {
+			--bg: #0b1324;
+			--panel: #0f1a33;
+			--card: #0b0b0b;
+			--text: #e5e7eb;
+			--muted: #cbd5e1;
+			--link: #38bdf8;
+			--border: #1e293b;
+		}
+
+		body {
+			margin: 0;
+			background: radial-gradient(1200px 600px at 50% 0%, #14224a 0%, var(--bg) 60%);
+			color: var(--text);
+			font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			line-height: 1.6;
+		}
+
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 2.5rem 1.25rem 4rem;
+		}
+
+		header {
+			background: rgba(0, 0, 0, 0.25);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 1.25rem 1.5rem;
+			margin-bottom: 1.5rem;
+			backdrop-filter: blur(6px);
+		}
+
+		header h1 {
+			margin: 0 0 0.25rem;
+			font-size: 1.6rem;
+			font-weight: 700;
+		}
+
+		header p {
+			margin: 0.25rem 0 0.75rem;
+			color: var(--muted);
+		}
+
+		nav a {
+			display: inline-block;
+			margin-right: 1rem;
+			color: var(--link);
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		.card {
+			background: rgba(0, 0, 0, 0.25);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 1.5rem;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 1.35rem;
+		}
+
+		h3 {
+			margin-top: 1.5rem;
+			font-size: 1.1rem;
+			color: var(--text);
+		}
+
+		p,
+		li {
+			color: var(--muted);
+			font-size: 1rem;
+		}
+
+		ul {
+			padding-left: 1.25rem;
+		}
+
+		code {
+			background: rgba(56, 189, 248, 0.12);
+			border: 1px solid rgba(56, 189, 248, 0.25);
+			padding: 0.1rem 0.35rem;
+			border-radius: 8px;
+			color: var(--text);
+		}
+
+		pre {
+			background: rgba(0, 0, 0, 0.35);
+			border: 1px solid var(--border);
+			padding: 1rem;
+			border-radius: 14px;
+			overflow-x: auto;
+			color: var(--text);
+		}
+
+		a {
+			color: var(--link);
+		}
+
+		.pill {
+			display: inline-block;
+			padding: 0.25rem 0.6rem;
+			border-radius: 999px;
+			background: rgba(56, 189, 248, 0.12);
+			border: 1px solid rgba(56, 189, 248, 0.25);
+			color: var(--text);
+			font-weight: 700;
+			font-size: 0.85rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Enhancement Narrative</h1>
+			<p class="muted">CS499 Computer Science Capstone – artifact enhancement explanation.</p>
+			<nav>
+				<a href="../">← Back to ePortfolio</a>
+				<a href="./scale-original.zip" download>Original ZIP</a>
+				<a href="./scale-enhanced.zip" download>Enhanced ZIP</a>
+			</nav>
+		</header>
+		<div class="card">
+			<p>
+				The primary artifact presented in this ePortfolio is a Guitar Scale Viewer application
+				developed using React and modern JavaScript. I selected this artifact because it
+				demonstrates my ability to design and implement a functional, interactive software system
+				while applying core computer science concepts such as data structures, algorithms, and
+				modular design.
+			</p>
+			<p>
+				Originally, the application allowed users to visualize musical scales across a guitar
+				fretboard. For this capstone enhancement, I focused on improving code organization,
+				readability, and maintainability, as well as clarifying the separation of concerns between
+				data generation, user interaction, and visual rendering. These enhancements were made to
+				better align the project with industry best practices and software engineering principles.
+			</p>
+			<p>
+				This artifact showcases my skills in front-end development, algorithmic problem solving, and
+				iterative refinement based on evaluation and reflection. The enhancements demonstrate my
+				growth in applying structured design patterns, reasoning about performance, and presenting
+				technical work in a clear and professional manner suitable for real-world software
+				development.
+			</p>
+		</div>
+	</div>
+</body>
